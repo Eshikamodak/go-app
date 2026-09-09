@@ -4,8 +4,8 @@ import(
   "net/http"
 )
 func main(){
-  http.HandleFunc("/",func(w http.ReponseWriter,r*http.Request){
+  http.HandleFunc("/",func(w http.ResponseWriter,r*http.Request){
     fmt.Fprint(w,"Hello from Google App Engine -Go!")
 })
- http.ListenAndServer(":8080",nil)
+ http.ListenAndServe(":8080",nil)
 }
